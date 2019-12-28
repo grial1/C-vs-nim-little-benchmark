@@ -1,7 +1,7 @@
 /**
   *	author:        Gastón Rial Saibene
-  *	description:   This is an example implementation of merge sort testing the NIM lang
-  *	               and compiler against an equivalent C implementation compiled with cc (GNU C compiler).
+  *	description:   This is an example implementation of merge sort for testing the NIM lang
+  *	               and compiler against an equivalent C implementation compiled with gcc (GNU C compiler).
   *	date:          27/12/2019
   *
 */
