@@ -1,7 +1,7 @@
-# c_vs_nim_little_benchmark
+# C vs nim little benchmark
 
 ### Description
-This repository contains the source code for an implementation of the *merge sort algorithm* using C and NIM programming languages. The purpose was to compare raw performance (memory size footprint and CPU time consumption) of the resultant binaries under a platform running the GNU/Linux OS.
+This repository contains the source code for an implementation of the **merge sort algorithm** using C and NIM programming languages. The purpose was to compare raw performance (memory size footprint and CPU time consumption) of the resultant binaries under a platform running the GNU/Linux OS.
 
 ### System employed for testing
 * Linux:          4.4.0-170-generic #199-Ubuntu SMP Thu Nov 14 01:45:04 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
@@ -14,7 +14,7 @@ This repository contains the source code for an implementation of the *merge sor
 
 ### How to run tests
 ```
-  $ git clone https://github.com/grial1/c_vs_nim_little_benchmark benchmarks 
+  $ git clone https://github.com/grial1/C-vs-nim-little-benchmark benchmarks
   $ cd benchmarks
   $ make
   $ make run

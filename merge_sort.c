@@ -57,31 +57,30 @@ int mergeSort(int l[], int s, int* r[])
   }
   else
   {
-    int ri_len = (s/2), le_len = (s - s/2);
+    int le_len = (s/2), ri_len = (s - s/2);
     int* ri_half = malloc(sizeof(int)*ri_len);
     int* le_half = malloc(sizeof(int)*le_len);
 
     int index = 0;
-    for(int i = 0; i < ri_len; i++)
+    for(int i = 0; i < le_len; i++)
     {  
-      ri_half[i] = l[index];
+      le_half[i] = l[index];
       index++;
     }
 
-    for(int j = 0; j < le_len; j++)
+    for(int j = 0; j < ri_len; j++)
     {  
-      le_half[j] = l[index];
+      ri_half[j] = l[index];
       index++;
     }
 
-    int* ri_sorted;
-    int* le_sorted;
-    if( mergeSort(ri_half,ri_len,&ri_sorted) != ri_len )
-	perror("somerhing went wrong!");
+    int* ri_sorted; int* le_sorted;
     if( mergeSort(le_half,le_len,&le_sorted) != le_len )
         perror("something went wrong!");
+    if( mergeSort(ri_half,ri_len,&ri_sorted) != ri_len )
+	perror("somerhing went wrong!");
 
-    merge(ri_sorted,le_sorted,ri_len,le_len,r);
+    merge(le_sorted,ri_sorted,le_len,ri_len,r);
 
     free(ri_half);
     free(le_half);
