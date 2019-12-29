@@ -23,6 +23,6 @@ run: merge_sort
 	size -B $<_nim.bin
 	@echo -n "\n\t=== CPU TIME ===\n"
 	@echo -n "> C to binary:\n"
-	sudo time ./$<_c.bin 1>/dev/null
+	/usr/bin/time ./$<_c.bin 1>/dev/null
 	@echo -n "> NIM (to C) to binary:\n"
-	sudo time ./$<_nim.bin 1>/dev/null
+	/usr/bin/time ./$<_nim.bin 1>/dev/null
